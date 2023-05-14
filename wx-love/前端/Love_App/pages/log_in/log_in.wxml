@@ -1,0 +1,14 @@
+<!--pages/log_in/log_in.wxml-->
+<view class="title">Love Story</view>
+
+<view class="login_wrapper">
+  <input type="text" placeholder="请输入账号" class="input_style" bindinput="inputUsername"/>
+  <input type="password" placeholder="请输入密码" class="input_style" bindinput="inputPassword"/>
+</view>
+<button class="register" bindtap="login">登录</button>
+<view style="text-align: center;">
+  <image src="/imgs/img1.png" mode=""/>
+</view>
+
+
+

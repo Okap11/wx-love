@@ -1,0 +1,45 @@
+/* pages/register/register.wxss */
+page {
+  background: linear-gradient(197.99deg, #2C9AFF -14.52%, #9C74F3 16.96%, #EC81B4 54.17%, #F1BC97 74.34%, #F4E283 100%);
+  font-family: PingFang SC;
+}
+
+.title {
+  margin-top: 218rpx;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 36px;
+  letter-spacing: 0px;
+  margin-left: 48rpx;
+  color: white;
+}
+
+.login_wrapper {
+  margin-top: 160rpx;
+  margin-left: 60rpx;
+}
+
+.input_style {
+  margin-top: 32rpx;
+  width: 630rpx;
+  height: 56rpx;
+  border-bottom: 1px solid #FFFFFFCC;
+  font-size: 56rpx;
+  color: white;
+  padding-bottom: 40rpx;
+  margin-bottom: 92rpx;
+}
+
+.tips {
+  font-size: 18px;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+
+.register {
+  height: 104rpx;
+  line-height: 104rpx;
+  width: 654rpx;
+  border-radius: 32px;
+  background-color: white;
+}

@@ -1,0 +1,65 @@
+<!--pages/add/add.wxml-->
+<view class="back" >
+  <image src="/imgs/back.png" mode="" bindtap="back"/>
+  <text class="title">添加{{ flag == 1 ? '心碎' : '心跳' }}事件</text>
+</view>
+<view style="margin-top: 44rpx;margin-left: 48rpx;">
+  <view style="font-size: 36px;">时间：</view>
+  <view class="time">
+    <text style="height: 64rpx;">{{ selectTime }}</text>
+    <view class="btn {{ flag == 1 ? 'other' : '' }}" style="margin-right: 48rpx;" bindtap="changeTime">
+      修改
+    </view>
+  </view>
+</view>
+<view class="main">
+  <view class="h1">
+    标题：
+  </view>
+  <view class="info">
+    <input type="text" maxlength="10" bindblur="changeTitle" disabled="{{ !titleflag }}" focus="{{ titleflag }}" bindtap="change"/>
+    <view class="btn {{ flag == 1 ? 'other' : '' }}" bindtap="change" data-c="title">
+      修改
+    </view>
+  </view>
+  <view class="describe">
+    <view class="wrapper">
+      <text class="h1">描述:</text>
+      <view class="btn {{ flag == 1 ? 'other' : '' }}" bindtap="change" data-c="content">
+      修改
+    </view>
+    </view>
+
+    <view class="content">
+      <view>
+        <textarea class="input" bindinput="changeContent" disabled="{{ !contentflag }}" focus="{{ contentflag }}"></textarea>
+        <image src="/imgs/img3.png" mode=""/>
+      </view>
+    </view>
+  </view>
+  <button class="submit {{ flag == 1 ? 'other' : '' }}" bindtap="submit">确认提交</button>
+</view>
+
+<view class="modal" wx:if="{{time}}">
+    <view class="modal-body">
+      <view class="top">
+        <view class="noBtn" bindtap="onCancel">取消</view>
+        <view class="okBtn" bindtap="onOk">确定</view>
+      </view>
+      <picker-view class="content1" value="{{value}}" bindchange="onChangePicker">
+        <picker-view-column>
+          <view class="column-item" wx:for="{{years}}" wx:key="years">{{item}}年</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view class="column-item" wx:for="{{months}}" wx:key="months">{{item}}月</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view class="column-item" wx:for="{{days}}" wx:key="days">{{item}}日</view>
+        </picker-view-column>
+        <picker-view-column>
+          <view class="column-item">上午</view>
+          <view class="column-item">下午</view>
+        </picker-view-column>
+      </picker-view>
+    </view>
+  </view>

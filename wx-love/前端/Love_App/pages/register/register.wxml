@@ -1,0 +1,10 @@
+<!--pages/log_in/log_in.wxml-->
+<view class="title">Love Story</view>
+
+<view class="login_wrapper">
+  <text class="tips">手机号</text>
+  <input type="text" class="input_style" bindinput="inputUsername"/>
+  <text class="tips" >设置密码</text>
+  <input type="password" class="input_style" bindinput="inputPassword"/>
+</view>
+<button class="register" bindtap="register">注册</button>

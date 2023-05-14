@@ -1,0 +1,37 @@
+<!--pages/ward/ward.wxml-->
+<view class="back" bindtap="back"><image src="/imgs/back.png" mode=""/></view>
+<view class="title">
+  <text>{{flag == 0 ? "我的" : "Ta的"}}</text>
+  <image class="love" src="/imgs/Vector.png" mode=""/> 
+  <text>跳值 : {{ love }}</text>
+</view>
+
+<view class="info">
+  <view wx:if="{{ flag == 0 }}">
+    您获得的每一次心跳，都是Ta的每一次
+    <image src="/imgs/Vector.png" mode="" style="width: 26rpx;height: 22rpx;"/>
+    动！
+  </view>
+  <view wx:else>
+    将您的每一次
+    <image src="/imgs/Vector.png" mode="" style="width: 26rpx;height: 22rpx;"/>
+    动！化作Ta的心跳值！
+  </view>
+
+  <scroll-view scroll-y class="rewardList">
+    <view class="item" wx:for="{{ rewardArr }}" wx:key="index">
+      <text class="grade">{{ item.grade }}分</text>
+      <text class="content">{{ item.content }}</text>
+      <view class="receive" wx:if="{{ love > item.grade }}">领取</view>
+      <view class="insu" wx:else>积分不足</view>
+    </view>
+  </scroll-view>
+
+  <view class="btn-wrapper" wx:if="{{ flag == 0 }}">
+    <button>一键领取</button>
+  </view>
+  <view class="btn-wrapper" wx:else>
+    <button>点击编辑</button>
+  </view>
+</view>
+

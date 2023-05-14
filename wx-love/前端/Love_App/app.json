@@ -1,0 +1,20 @@
+{
+  "pages": [
+    "pages/register/register",
+    "pages/log_in/log_in",
+    "pages/main/main",
+    "pages/ward/ward",
+    "pages/add/add",
+    "pages/begin/begin",
+    "pages/details/details"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "weixin",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom",
+    "enablePullDownRefresh": true
+  },
+  "sitemapLocation": "sitemap.json"
+}

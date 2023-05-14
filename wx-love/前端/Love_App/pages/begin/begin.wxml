@@ -1,0 +1,18 @@
+<!--pages/begin/begin.wxml-->
+<view class="title">
+  <view style="font-size: 72rpx;">
+    Love Story
+  </view>
+  <view style="font-size: 36rpx;margin-top: 24rpx;">
+    输入口令，恋接心动的Ta ~
+  </view>
+  <view>
+    <input type="text" name="" id="" placeholder="Ta一直在等你..." bindinput="inputCode"/>
+  </view>
+</view>
+<view style="text-align: center;margin-top: 28rpx;" bindtap="bindCode">
+  <image src="/imgs/begin.png" mode="" style="  width: 516rpx; height: 400rpx;" />
+</view>
+<view style="text-align: center;">
+  <image src="/imgs/img1.png" mode="" style="width: 672rpx; height: 644rpx;"/>
+</view>

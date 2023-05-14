@@ -1,0 +1,103 @@
+/* pages/ward/ward.wxss */
+page{
+/* Love渐变 */
+background: linear-gradient(197.99deg, #2C9AFF -14.52%, #9C74F3 16.96%, #EC81B4 54.17%, #F1BC97 74.34%, #F4E283 100%);
+}
+.back{
+  margin-top: 136rpx;
+  margin-left: 48rpx;
+}
+.back image{
+  width: 18rpx;
+  height: 32rpx;
+}
+.title{
+  margin-top: 50rpx;
+  margin-left: 48rpx;
+  color: white;
+  font-size: 36px;
+}
+.love{
+  margin: 0rpx 24rpx;
+  width: 66rpx;
+  height: 58rpx;
+}
+.info{
+  width: 100% - 96rpx;
+  height: 1200rpx;
+  margin-top: 48rpx;
+  background-color: white;
+  border-radius: 36px 36px 0px 0px;
+  padding-top: 48rpx;
+  padding-left: 48rpx;
+  color: rgba(18, 27, 54, 1);
+  position: relative;
+  bottom: 0;
+}
+.rewardList{
+  height: 870rpx;
+  overflow: hidden;
+  padding-top: 48rpx;
+}
+.item{
+  width: 558rpx;
+  height: 100rpx;
+  background: #FECDCA;
+  display: flex;
+  padding-left: 48rpx;
+  padding-right: 48rpx;
+  align-items: center;
+  border-radius: 36px;
+  font-weight: 600;
+  margin-bottom: 48rpx;
+}
+.grade{
+  width: 3em;
+  font-size: 48rpx;
+  color: white;
+  text-align: left;
+  line-height: 60rpx;
+}
+.content{
+  width: 8em;
+  font-size: 36rpx;
+  color: rgba(255, 130, 90, 1);
+  text-align: center;
+}
+.receive{
+  width: 120rpx;
+  height: 60rpx;
+  font-size: 24rpx;
+  background: #FF825A;
+  border-radius: 36px;
+  color: white;
+  display: inline-block;
+  text-align: center;
+  line-height: 60rpx;
+}
+.insu{
+  width: 120rpx;
+  height: 60rpx;
+  font-size: 24rpx;
+  background: transparent;
+  border-radius: 36px;
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  display: inline-block;
+  text-align: center;
+  line-height: 60rpx;
+}
+.btn-wrapper{
+  position: absolute;
+  bottom: 70rpx;
+}
+.btn-wrapper button{
+  width: 654rpx;
+  height: 100rpx;
+  background: #FF825A;
+  border-radius: 36px;
+  color: white;
+  font-weight: 600;
+  font-size: 48rpx;
+  line-height: 100rpx;
+}

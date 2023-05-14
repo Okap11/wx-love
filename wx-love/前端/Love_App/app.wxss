@@ -1,0 +1,17 @@
+/**app.wxss**/
+page{
+  /* overflow: hidden; */
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  font-family: PingFang SC;
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 

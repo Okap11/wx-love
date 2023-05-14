@@ -1,0 +1,43 @@
+/* pages/log_in/log_in.wxss */
+page {
+  background: linear-gradient(197.99deg, #2C9AFF -14.52%, #9C74F3 16.96%, #EC81B4 54.17%, #F1BC97 74.34%, #F4E283 100%);
+  font-family: PingFang SC;
+  overflow: hidden;
+}
+.title {
+  margin-top: 218rpx;
+  font-size: 72rpx;
+  font-weight: 500;
+  margin-left: 48rpx;
+  color: white;
+}
+
+.login_wrapper {
+  margin-top: 120rpx;
+  margin-left: 60rpx;
+}
+.input_style {
+  margin-top: 48rpx;
+  width: 586rpx;
+  height: 104rpx;
+  font-size: 36rpx;
+  padding-left: 44rpx;
+  border: transparent;
+  background: #FFFFFF;
+  mix-blend-mode: normal;
+  opacity: 0.3;
+  border-radius: 41px;
+}
+.register {
+  margin-top: 146rpx;
+  height: 104rpx;
+  line-height: 104rpx;
+  width: 654rpx;
+  border-radius: 32px;
+  color: #63479A;
+}
+image{
+  width: 604rpx;
+  height: 578rpx;
+  margin:90rpx 72rpx;
+}

@@ -1,0 +1,77 @@
+<!--pages/main/main.wxml-->
+<view class="back" bindtap="back">
+  <image src="/imgs/back.png" mode="" />
+</view>
+<view class="love-num">
+  <text>恋爱值：{{ total }}</text>
+</view>
+<view class="info">
+  <text>{{flag == 0 ? "心跳值" : "给Ta设置"}}</text>
+  <image class="love" src="/imgs/Vector.png" mode="" />
+  <text>{{flag == 0 ? "兑换奖励" : "心跳值奖励"}}</text>
+  <image bindtap="next" class="ward" src="/imgs/back2.png" mode="" />
+</view>
+<view style="display: flex;margin-top: 60rpx;margin-left: 50rpx;">
+  <view data-type="0" class="my-heart {{flag == 0 ? 'color' : ''}}" bindtap="change">我的心跳值：
+    {{ herScore }}
+  </view>
+  <view data-type="1" class="she-heart {{flag == 1 ? 'color' : ''}}" bindtap="change">Ta的心跳：
+    {{ myScore }}
+  </view>
+</view>
+
+<view class="rule">
+  <text style="line-height: 36px;color: white;">规则</text>
+</view>
+
+<view style="position: relative;width: 100vw;" wx:if="{{ flag == 0 }}">
+  <scroll-view scroll-y="true" class="list">
+    <view class="event" wx:for="{{ herArray }}" wx:key="index">
+      <view style="line-height: 100rpx;display: flex; justify-content: space-around;">
+        <text class="item">{{ index + 1 }}</text>
+        <view style="width: 7em;">
+          <view style="font-size: 16px; height: 32rpx;line-height: 32rpx;margin-bottom: 8rpx;margin-top: 20rpx;">{{ item.title }}</view>
+          <view style="font-size: 10px;height: 10rpx;line-height: 10rpx;color: rgba(0, 0, 0, .2);">{{ item.created_date }}</view>
+        </view>
+        <view style="width: 100rpx;margin-left: 100rpx; {{ parseInt(item.score) < 0 ? 'color:#63A1FE' : '' }}">
+          <text style="width: 2em;display: inline-block;">{{ item.score }} </text>
+          <image src="/imgs/happy.png" wx:if="{{ item.img }}" mode="" style="width:26rpx; height:26rpx"/>
+          <image src="/imgs/sad.png" wx:else mode="" style="width:26rpx; height:26rpx"/>
+        </view>
+        <view style="width: 68rpx;height: 32rpx;" bindtap="toDetails" data-flag="{{ item.id }}" data-isMy="{{ 0 }}">
+          <image src="/imgs/blank_back.png" mode="" style="width: 20rpx;height: 32rpx;" data-flag="{{ item.id }}"/>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+
+<view style="position: relative;width: 100vw;" wx:if="{{ flag == 1 }}">
+  <scroll-view scroll-y="true" class="list color">
+    <view class="event" wx:for="{{ myArray }}" wx:key="index">
+      <view style="line-height: 100rpx;display: flex; justify-content: space-around;">
+        <text class="item">{{ index + 1 }}</text>
+        <view style="width: 7em;">
+          <view style="font-size: 16px; height: 32rpx;line-height: 32rpx;margin-bottom: 8rpx;margin-top: 20rpx;">{{ item.title }}</view>
+          <view style="font-size: 10px;height: 10rpx;line-height: 10rpx;color: rgba(0, 0, 0, .2);">{{ item.created_date }}</view>
+        </view>
+        <view style="width: 100rpx;margin-left: 100rpx;" class="{{ parseInt(item.score) < 0 ? 'sad' : '' }}">
+          <text style="width: 2em;display: inline-block;">{{ item.score }} </text>  
+          <image src="/imgs/happy.png" wx:if="{{ item.img }}" mode="" style="width:26rpx; height:26rpx"/>
+          <image src="/imgs/sad.png" wx:else mode="" style="width:26rpx; height:26rpx"/>
+        </view>
+        <view style="width: 68rpx;height: 32rpx;" bindtap="toDetails" data-flag="{{ item.id }}" data-isMy="{{ 1 }}">
+          <image src="/imgs/blank_back.png" mode="" style="width: 20rpx;height: 32rpx;" data-flag="{{ item.id }}"/>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+  <view class="btn">
+      <view class="circle1" bindtap="toAdd" data-flag="0">
+        <image src="/imgs/add.png" mode="" data-flag="0"/>
+      </view>
+      <view class="circle2" bindtap="toAdd" data-flag="1">
+        <image src="/imgs/reduce.png" mode="" style="height:6rpx" data-flag="1"/>
+      </view>
+    </view>
+</view>

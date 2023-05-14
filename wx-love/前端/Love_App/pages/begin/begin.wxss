@@ -1,0 +1,23 @@
+/* pages/begin/begin.wxss */
+page{
+  background: linear-gradient(197.99deg, #2C9AFF -14.52%, #9C74F3 16.96%, #EC81B4 54.17%, #F1BC97 74.34%, #F4E283 100%);
+  font-family: PingFang SC;
+}
+.title{
+  margin-top: 218rpx;
+  margin-left: 48rpx;
+  color: #fff;
+}
+input{
+  width: 372rpx;
+  height: 92rpx;
+  padding-left: 42rpx;
+  margin-top: 48rpx;
+  background: rgba(255, 255, 255, .3);
+  border-radius: 25px;
+}
+input::placeholder{
+  font-size: 36rpx;
+  color: #FFFFFF;
+  opacity: 0.6;
+}

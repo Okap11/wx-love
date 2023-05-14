@@ -1,0 +1,41 @@
+<!--pages/details/details.wxml-->
+<view class="page {{ isHappy ? 'isHappy' : 'isSad'}}">
+  <view class="back" >
+    <image src="/imgs/back.png" mode="" bindtap="back"/>
+    <text class="title">{{ score }}</text>
+  </view>
+  <view style="margin-top: 44rpx;margin-left: 48rpx;">
+    <view style="font-size: 36px;">时间：</view>
+    <view class="time">
+      <text style="height: 64rpx;">{{ selectTime }}</text>
+    </view>
+  </view>
+  <view class="main">
+    <view class="h1">
+      标题：
+    </view>
+    <view class="info">
+      <input type="text" maxlength="10" bindblur="changeTitle" disabled="{{ !titleflag }}" focus="{{ titleflag }}" bindtap="change" value="{{ title }}"/>
+      <view class="btn {{ isHappy ? 'isHappy' : 'isSad'}}" bindtap="change" data-c="title" wx:if="{{ flag }}">
+        修改
+      </view>
+    </view>
+    <view class="describe">
+      <view class="wrapper">
+        <text class="h1">描述:</text>
+        <view class="btn {{ isHappy ? 'isHappy' : 'isSad'}}" bindtap="change" data-c="content" wx:if="{{ flag }}">
+        修改
+      </view>
+      </view>
+
+      <view class="content">
+        <view>
+          <textarea class="input" bindinput="changeContent" disabled="{{ !contentflag }}" focus="{{ contentflag }}" value="{{ content }}"></textarea>
+          <image src="/imgs/img3.png" mode=""/>
+        </view>
+      </view>
+    </view>
+    <button class="submit {{ isHappy ? 'isHappy' : 'isSad'}}" bindtap="submit" wx:if="{{ flag }}">确认提交</button>
+  </view>
+</view>
+

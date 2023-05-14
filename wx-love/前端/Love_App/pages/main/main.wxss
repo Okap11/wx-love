@@ -1,0 +1,130 @@
+/* pages/main/main.wxss */
+page{
+position: absolute;
+width: 375px;
+height: 812px;
+left: 0px;
+top: 0px;
+
+/* Love渐变 */
+background: linear-gradient(197.99deg, #2C9AFF -14.52%, #9C74F3 16.96%, #EC81B4 54.17%, #F1BC97 74.34%, #F4E283 100%);
+color: white;
+
+}
+.back{
+  margin-top: 136rpx;
+  margin-left: 48rpx;
+}
+.back image{
+  width: 18rpx;
+  height: 32rpx;
+}
+.love-num{
+  margin-top: 50rpx;
+  margin-left: 48rpx;
+  font-size: 36px;
+}
+.info{
+
+  margin-left: 48rpx;
+  margin-top: 36rpx;
+  font-size: 20px;
+}
+.love{
+  width: 29rpx;
+  height: 25rpx;
+  margin: 0rpx 26rpx;
+}
+.ward{
+  margin-left: 24rpx;
+  width: 18rpx;
+  height: 32rpx;
+}
+.my-heart{
+  width: 322rpx;
+  height: 61rpx;
+  line-height: 61rpx;
+  font-size: 18px;
+  background-color:transparent;
+  text-align: center;
+  color: white;
+  border: 3px solid white;
+  border-radius: 72rpx 0rpx 0rpx 72rpx;
+}
+.she-heart{
+  width: 322rpx;
+  height: 61rpx;
+  line-height: 63rpx;
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  background-color:transparent;
+  border-radius: 0rpx 72rpx 72rpx 0rpx;
+  border: 3px solid white;
+}
+.color{
+  background-color: white;
+  color: #FA57B6;
+}
+.rule{
+  width: 94rpx;
+  height:72rpx;
+  font-size: 14px;
+  text-align: center;
+  background-color: rgba(229, 229, 229, 0.3);
+  border-radius: 60rpx 0rpx 0rpx 60rpx;
+  position: fixed;
+  top: 220rpx;
+  right: 0;
+}
+.list{
+  color: #121B36;
+  height: 448rpx;
+  margin-top: 592rpx;
+  padding-top: 48rpx;
+  border-radius: 72rpx 72rpx 0rpx 0rpx;
+}
+.event{
+  width: 654rpx;
+  height: 100rpx;
+  border-radius: 36px;
+  background-color: white;
+  color: black;
+  text-align: center;
+  margin: 0rpx 48rpx 24rpx;
+}
+.btn image{
+  width: 32rpx;
+  height: 32rpx;
+  margin-top: 50%;
+  transform: translateY(-50%);
+}
+.circle1{
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: 50%;
+  background-color:rgba(254, 202, 202, 1);
+  position: absolute;
+  top: -44rpx;
+  right: 224rpx;
+  text-align: center;
+  z-index: 9999;
+}
+.circle2{
+  width: 88rpx;
+  height: 88rpx;
+  border-radius: 50%;
+  background-color:rgba(162, 199, 254, 1);
+  position: absolute;
+  top: -44rpx;
+  right: 66rpx;
+  text-align: center;
+  z-index: 9999;
+}
+.item{
+  width: 70rpx;
+  color: rgba(0,0,0,0.3);
+}
+.sad{
+  color:#63A1FE
+}
